@@ -1,0 +1,199 @@
+html,body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.title {
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    color: #fff;
+    line-height: 250px;
+    background: linear-gradient(to bottom right, #000000 0%, rgba(81, 81, 81, 0.78) 100%);
+    font-family: fantasy;
+    font-size: 5em;
+}
+.container {
+    width: 100%;
+/*    position: relative;*/
+/*    background: #eee;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    width: 300px;
+    height: 450px;
+    background: linear-gradient(to bottom right, #000000 0%, rgba(81, 81, 81, 0.78) 100%);
+    position: relative;
+    overflow: hidden;
+    margin: auto ;
+    margin-top: 20px;
+    border-radius: 4px;
+    transition: .3s ease;
+    box-shadow: 0 3px 8px rgba(81, 81, 81, 0.6);
+}
+.box:hover {
+    -webkit-box-shadow: 0px 20px 40px -20px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 20px 40px -20px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 20px 40px -20px rgba(0, 0, 0, 0.45);
+}
+.box > .cover_in_box {
+    width: 290px;
+    height: 440px;
+    position: absolute;
+    background: red;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    transform: translate(-50% ,-50%);
+    overflow: hidden;
+}
+.box > .cover_in_box > header {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    position: absolute;
+    background-image: url('hero_large_2x.png');
+    background-position: center;
+    -webkit-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -moz-transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    transition: 1s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    overflow: hidden;
+}
+.box > .cover_in_box > header > img {
+    width: 100%;
+}
+.box:hover header {
+    background-position: bottom;
+}
+.box > .cover_in_box > header > .deta {
+    position: absolute;
+    width: 90px;
+    height: 35px;
+    background: rgba(10, 29, 64, 0.28);
+    text-align: center;
+    line-height: 35px;
+    color: #ffffff;
+    font-family: monospace;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+.box > .cover_in_box > header > .deta:hover {
+    background: rgba(49, 49, 49, 0.9);
+}
+.box > .cover_in_box:hover .deta {
+    width: 100%;
+    background: rgba(10, 29, 64, 0.6);
+    font-size: 1.2em;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.box > .cover_in_box > .footer {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+/*    background: green;*/
+    display: block;
+    background: rgb(255, 255, 255);
+    bottom: 0;
+}
+.box > .cover_in_box > .footer > .btn {
+    width: 90%;
+    height: 45px;
+    background: #03FFB9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    transition: .3s ease-in;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+.box > .cover_in_box > .footer > .btn:before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #038bff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+@keyframes animation_btn_before {
+    0% { width: 0;}
+    20% { width: 20%;}
+    40% { width: 20%;}
+    60% { width: 35%;}
+    80% { width: 70%;}
+    95% { width: 100%;}
+    100% { width: 0%;}
+}
+-webkit-@keyframes animation_btn_before {
+    0% { width: 0;}
+    20% { width: 20%;}
+    40% { width: 20%;}
+    60% { width: 35%;}
+    80% { width: 70%;}
+    95% { width: 100%;}
+    100% { width: 0%;}
+}
+-moz-@keyframes animation_btn_before {
+    0% { width: 0;}
+    20% { width: 20%;}
+    40% { width: 20%;}
+    60% { width: 35%;}
+    80% { width: 70%;}
+    95% { width: 100%;}
+    100% { width: 0%;}
+}
+@keyframes animation_btn {
+    0% { height: 50px;}
+    10% { height: 25px;}
+    20% { height: 25px;}
+    90% { height: 25px;}
+    100% { height: 50px;}
+}
+-webkit-@keyframes animation_btn {
+    0% { height: 50px;}
+    10% { height: 25px;}
+    20% { height: 25px;}
+    90% { height: 25px;}
+    100% { height: 50px;}
+}
+-moz-@keyframes animation_btn {
+    0% { height: 50px;}
+    10% { height: 25px;}
+    20% { height: 25px;}
+    90% { height: 25px;}
+    100% { height: 50px;}
+}
+.box > .cover_in_box > .footer > .btn:focus {
+    animation: animation_btn .9s ease-in both;   
+    color: #03FFB9;
+}
+.box > .cover_in_box > .footer > .btn:focus:before {
+    animation: animation_btn_before 1s ease-in both;
+}
+.box > .cover_in_box > .footer > .btn:hover {
+    background: none;
+    border: 2px solid #03ffb9;
+    color: #03ffb9;
+}
+.footer {
+    width: 100%;
+    height: 300px;
+    background: red;
+    
+}
