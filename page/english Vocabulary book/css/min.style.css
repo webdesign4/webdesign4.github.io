@@ -123,3 +123,37 @@ html, body {
 .container > .word_box > .larg-c {
     font-size: 2.5em;
 }
+.container > .adjectives {
+    background: #ff2f2f;
+    box-shadow: 0 3px 8px rgba(255, 47, 47, 0.4);
+}
+.container > .verbs {
+    background: #00ff4e;
+    box-shadow: 0 3px 8px rgba(0, 255, 78, 0.4);
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-==--=-=-=-=- */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-==--=-=-=-=- */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-==--=-=-=-=- */
+/*            break style text */
+.container > .break_text_a {
+    width: 100%;
+    height: 100vh;
+    background: url('../image/break_text_background_a.png');
+    background-size: left;
+    position: relative;
+    transition: 5s
+}
+.container > .break_text_a > .break_text_a_text {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.container > .break_text_a:hover {
+    background-position: right
+}
