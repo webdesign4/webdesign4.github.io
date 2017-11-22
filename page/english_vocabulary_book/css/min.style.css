@@ -15,9 +15,33 @@ html, body {
     content: '';
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.12);
+    background: rgba(159, 159, 159, 0.12);
     position: absolute;
 }
+/*
+.jumbutron:after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+.jumbutron > .icons {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.29);
+}
+.jumbutron > .icons > li {
+    width: 50px;
+    height: 50px;
+    background: red;
+    float: left;
+}
+*/
 .jumbutron > .do_what_they_say_you_cannot {
     color: white;
     text-align: center;
@@ -30,6 +54,7 @@ html, body {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 .container {
     width: 100%;
@@ -249,16 +274,6 @@ html, body {
 .route_provider > .back:hover:before {
     top: 0%;
 }
-
-
-
-
-
-
-
-
-
-
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /*                    re sise style */
