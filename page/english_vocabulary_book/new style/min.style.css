@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container > .year_box {
+    width: 140px;
+    height: 180px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 25px;
+    position: relative;
+    box-shadow: 0 3px 8px rgba(4, 190, 254, 0.3);
+    display: block;
+    overflow: hidden;
+}
+.container > .year_one {
+    background-image: linear-gradient(to top, #04ed64 0%, #04d3cf);
+    border: 4px solid transparent;
+}
+.container > .year_second {
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    border: 4px solid transparent;
+}
+.container > .year_third {
+    background-image: linear-gradient(to top, #00c6fb 0%, #4f93ff 100%);
+    border: 4px solid transparent;
+}
+.container > .year_fourth {
+    background-image: linear-gradient(-20deg, #b721ff 0%, #ff00eb 100%);
+    border: 4px solid transparent;
+}
+.container > .year_box > p {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .5s;
+}
+.container > .year_box:hover p {
+    top: 50%;
+}
+.container > .year_box:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.41);
+    position: absolute;
+    transition: .3s ease-in-out;
+    top: 100%;
+}
+.container > .year_box:hover:before {
+    top: 0%;
+}
