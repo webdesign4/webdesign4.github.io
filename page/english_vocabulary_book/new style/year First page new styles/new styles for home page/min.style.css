@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+}
+.container > .year_box {
+    width: 100%;
+    height: 180px;
+/*    background: red;*/
+    margin-top: 25px;
+    position: relative;
+}
+.container > .year_box > .box_left,
+.container > .year_box > .box_right{
+    width: 380px;
+    height: 180px;
+/*    background: #d0d0d0;*/
+    position: absolute;
+    overflow: hidden;
+}
+.container > .year_box > .box_left {
+    left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.container > .year_box > .box_right {
+    right: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}

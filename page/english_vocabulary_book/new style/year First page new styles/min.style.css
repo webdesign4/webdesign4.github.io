@@ -1,0 +1,133 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+}
+.container > .year_box {
+    width: 100%;
+    height: 180px;
+/*    background: red;*/
+    margin-top: 25px;
+    position: relative;
+}
+.container > .year_box > .box_left,
+.container > .year_box > .box_right{
+    width: 380px;
+    height: 180px;
+/*    background: #d0d0d0;*/
+    position: absolute;
+    overflow: hidden;
+}
+.container > .year_box > .box_left {
+    left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.container > .year_box > .box_right {
+    right: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.container > .year_box > .box_left > .image {
+    width: 135px;
+    height: 180px;
+    z-index: 2;
+    position: relative;
+}
+.container > .year_box > .box_left > .rightsite_box {
+    width: 64.4%;
+    height: 100%;
+/*    right: 0%;*/
+    position: absolute;
+/*    background-image: linear-gradient(to top, #C9F100 0%, #8DFF27);*/
+    background: rgb(177, 177, 177);
+    top: 0;
+    z-index: 1;
+    animation: animation 1s 1 ease-in-out both;
+}
+.container > .year_box > .box_left > .rightsite_box:before {
+    content: '';
+    width: 4px;
+    height: 96%;
+    background: #898989;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    transition: .3s ease-in-out;
+    z-index: -1;
+}
+.container > .year_box > .box_left > .rightsite_box:hover:before {
+    background: #3c3c3c;
+/*    width: 135px;*/
+    height: 100%;
+    z-index: -1;
+}
+.container > .year_box > .box_left > .rightsite_box > .header_text {
+    width: 100%;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 3.3em;
+    text-align: center;
+    word-spacing: 10px;
+}
+@keyframes animation {
+    0% {
+        right: 100%;
+        opacity: 1;
+    }
+    100% {
+        right: 0%;
+        opacity: 1
+    }
+}
+.container > .year_box > .box_left > .rightsite_box > .info {
+    position: absolute;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    left: 5%;
+    top: 40%;
+}
+
+.btn_year_box {
+    width: 190px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.1em;
+/*    background: red;*/
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -92%);
+    overflow: hidden;
+}
+.btn_year_box > a {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.btn_year_box:before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left .3s ease, width 1s linear;
+}
+.btn_year_box:hover:before {
+    left: 100%;
+    transform: translateX(-100%);
+    width: 2px;
+    height: 100%;
+    background: white;
+}
