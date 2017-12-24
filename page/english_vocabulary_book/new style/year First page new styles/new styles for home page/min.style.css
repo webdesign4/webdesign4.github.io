@@ -11,7 +11,7 @@ html, body {
 }
 .container > .year_box {
     width: 100%;
-    height: 180px;
+    height: 190px;
 /*    background: red;*/
     margin-top: 25px;
     position: relative;
@@ -19,7 +19,7 @@ html, body {
 .container > .year_box > .box_left,
 .container > .year_box > .box_right{
     width: 380px;
-    height: 180px;
+    height: 190px;
 /*    background: #d0d0d0;*/
     position: absolute;
     overflow: hidden;
@@ -33,4 +33,74 @@ html, body {
     right: 0;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+}
+.container > .year_box > .box_left > .title_year_a,
+.container > .year_box > .box_right > .title_year_a{
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.8em;
+    left: 11px;
+    color: white;
+}
+.container > .year_box > .box_left > .title_year_b,
+.container > .year_box > .box_right > .title_year_b{
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.8em;
+    left: 11px;
+    top: 40px;
+    color: white;
+}
+.container > .year_box > .box_left > .title_year_c,
+.container > .year_box > .box_right > .title_year_c{
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.8em;
+    left: 11px;
+    top: 80px;
+    color: white;
+}
+.container > .year_box > .box_left > .year_btn,
+.container > .year_box > .box_right > .year_btn {
+    width: 210px;
+    height: 50px;
+    background: white;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    top: 71%;
+    color: #989898;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 50px;
+    overflow: hidden;
+    transition: .2s;
+    transition-delay: .2s;
+}
+.container > .year_box > .box_left > .year_btn:before,
+.container > .year_box > .box_right > .year_btn:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(59, 59, 59);
+    top: 100%;
+    left: 0;
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.container > .year_box > .box_left > .year_btn:hover:before,
+.container > .year_box > .box_right > .year_btn:hover:before {
+    top: 0;
+}
+.container > .year_box > .box_left > .year_btn:hover,
+.container > .year_box > .box_right > .year_btn:hover {
+    color: white;
 }
