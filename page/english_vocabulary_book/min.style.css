@@ -619,7 +619,7 @@ html, body {
 	.jumbotron > .adverno > .adverno_box{
 		width: 260px;
 		height: 200px;
-		margin-bottom: 5px
+		margin-bottom: 5px;
 	}
 	.jumbotron > .adverno > .adverno_box > .adverno_adjectives,
 	.jumbotron > .adverno > .adverno_box > .adverno_verbs,
@@ -638,4 +638,314 @@ html, body {
 		width: 60%;
 		font-size: 1em;
 	}
+}
+/*container style */
+/*container style */
+/*container style */
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+	margin-top: 45px
+}
+.container > .year_box {
+    width: 300px;
+    height: 350px;
+/*    background: red;*/
+    margin: auto;
+    margin-top: 25px;
+    position: relative;
+}
+.container > .year_box > .box_left,
+.container > .year_box > .box_right {
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    position: absolute;
+    overflow: hidden;
+    display: block;
+}
+.container > .year_box > .first_year:before,
+.container > .year_box > .second_year:before,
+.container > .year_box > .third_year:before,
+.container > .year_box > .fourth_year:before {
+    content: '';
+    width: 100%;
+    height: 68%;
+    position: absolute;
+    top: 0;
+}
+.container > .year_box > .first_year:before { background: #3DFF7E;}
+.container > .year_box > .second_year:before { background: #FF3157;}
+.container > .year_box > .third_year:before { background: #46EDFF;}
+.container > .year_box > .fourth_year:before { background: #FF3AE0;}
+.container > .year_box > .box_left {
+    left: 0;
+/*    border-radius: 8px;*/
+}
+.container > .year_box > .box_right {
+    right: 0;
+/*    border-radius: 8px;*/
+}
+.container > .year_box > .box_left > img,
+.container > .year_box > .box_right > img{
+    display: none;
+}
+.container > .year_box > .box_left > .title_year_a,
+.container > .year_box > .box_right > .title_year_a {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.8em;
+/*    top: 15px;*/
+    left: 9px;
+    color: white;
+    
+}
+.container > .year_box > .box_left > .title_year_b,
+.container > .year_box > .box_right > .title_year_b {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.8em;
+    left: 9px;
+    top: 45px;
+    color: white;
+}
+.container > .year_box > .box_left > .title_year_c,
+.container > .year_box > .box_right > .title_year_c {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2.8em;
+    left: 9px;
+    top: 90px;
+    color: white;
+}
+.container > .year_box > .box_left > .year_btn,
+.container > .year_box > .box_right > .year_btn {
+    width: 210px;
+    height: 50px;
+    background: white;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    top: 71%;
+    color: #989898;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 50px;
+    overflow: hidden;
+    transition: .2s;
+    transition-delay: .2s;
+}
+.container > .year_box > .box_left > .year_btn:before,
+.container > .year_box > .box_right > .year_btn:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(59, 59, 59);
+    top: 100%;
+    left: 0;
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.container > .year_box > .box_left > .year_btn:hover:before,
+.container > .year_box > .box_right > .year_btn:hover:before {
+    top: 0;
+}
+.container > .year_box > .box_left > .year_btn:hover,
+.container > .year_box > .box_right > .year_btn:hover {
+    color: white;
+}
+.container > .year_box > .box_left > .link_box,
+.container > .year_box > .box_right > .link_box {
+    width: 100%;
+    height: 45px;
+/*    background: red;*/
+    position: absolute;
+    bottom: 0;
+    z-index: 2
+}
+.container > .year_box > .first_year > .link_box:before, 
+.container > .year_box > .second_year > .link_box:before,
+.container > .year_box > .third_year > .link_box:before,
+.container > .year_box > .fourth_year > .link_box:before {
+    content: '';
+    width: 110%;
+    height: 50%;
+    background: #3DFF7E;
+    position: absolute;
+    transform: skewX(-25deg);
+    bottom: 0;
+    left: -115%;
+    transition: .3s ease-in-out;
+}
+.container > .year_box > .box_left > .link_box:hover:before,
+.container > .year_box > .box_right > .link_box:hover:before { left: -5%;}
+.container > .year_box > .first_year > .link_box:after, 
+.container > .year_box > .second_year > .link_box:after,
+.container > .year_box > .third_year > .link_box:after,
+.container > .year_box > .fourth_year > .link_box:after {
+    content: '';
+    width: 110%;
+    height: 50%;
+    position: absolute;
+    transform: skewX(25deg);
+    left: -115%;
+    transition: .3s ease-in-out;
+    z-index: -1;
+}
+.container > .year_box > .first_year > .link_box:after {background: #3DFF7E;}
+.container > .year_box > .second_year > .link_box:after {background: #FF3157;}
+.container > .year_box > .third_year > .link_box:after {background: #46EDFF;}
+.container > .year_box > .fourth_year > .link_box:after {background: #FF3AE0;}
+.container > .year_box > .first_year > .link_box:before {background: #3DFF7E;}
+.container > .year_box > .second_year > .link_box:before {background: #FF3157;}
+.container > .year_box > .third_year > .link_box:before {background: #46EDFF;}
+.container > .year_box > .fourth_year > .link_box:before {background: #FF3AE0;}
+.container > .year_box > .box_left > .link_box:hover:after,
+.container > .year_box > .box_right > .link_box:hover:after { left: -5%;}
+.container > .year_box > .box_left > .link_box > .link_box_text, 
+.container > .year_box > .box_right > .link_box > .link_box_text {
+    position: absolute;
+    color: #1A1A1A;
+    line-height: 45px;
+    padding-left: 11px;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    transition: .3s ease-in-out;
+}
+.container > .year_box > .box_left > .link_box > .link_box_text:hover, 
+.container > .year_box > .box_right > .link_box > .link_box_text:hover { color: white;}
+.container > .year_box > .box_left > .link_box > i,
+.container > .year_box > .box_right > .link_box > i {
+    position: absolute;
+    right: 20px;
+    line-height: 45px;
+    font-size: 25px;
+    color: #1A1A1A;
+    transition: .3s ease-in-out;
+}
+.container > .year_box > .box_left > .link_box:hover i,
+.container > .year_box > .box_right > .link_box:hover i {
+    color: white;
+}
+/* -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+@media only screen and (max-width: 600px) {
+	.container {
+		margin: 0px;
+	}
+    .container > .year_box {
+        width: 100%;
+        height: 190px;
+        /*    background: red;*/
+        margin-top: 25px;
+        position: relative;
+    }
+    .container > .year_box > .box_left,
+    .container > .year_box > .box_right{
+        width: 380px;
+        height: 180px;
+        /*    background: #d0d0d0;*/
+        position: absolute;
+        overflow: hidden;
+    }
+    .container > .year_box > .box_left {
+        left: 0;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .container > .year_box > .box_right {
+        right: 0;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .container > .year_box > .box_left > .link_box,
+    .container > .year_box > .box_right > .link_box {
+        display: none;
+    }
+    .container > .year_box > .box_left:before,
+    .container > .year_box > .box_right:before {
+        display: none;
+    }
+    .container > .year_box > .first_year {
+        background: #3DFF7E;
+    }
+    .container > .year_box > .second_year {
+        background: #FF3157;
+    }
+    .container > .year_box > .third_year {
+        background: #46EDFF;
+    }
+    .container > .year_box > .fourth_year {
+        background: #FF3AE0;
+    }
+}
+@media only screen and (max-width: 400px) {
+	.container {
+		margin: 0px;
+	}
+    .container > .year_box {
+        width: 100%;
+        height: 190px;
+        /*    background: red;*/
+        margin-top: 25px;
+        position: relative;
+    }
+    .container > .year_box > .box_left,
+    .container > .year_box > .box_right{
+        width: 100%;
+        height: 180px;
+        /*    background: #d0d0d0;*/
+        position: absolute;
+        overflow: hidden;
+    }
+    .container > .year_box > .box_left {
+        left: 0;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .container > .year_box > .box_right {
+        right: 0;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .container > .year_box > .box_left > .link_box,
+    .container > .year_box > .box_right > .link_box {
+        display: none;
+    }
+    .container > .year_box > .box_left:before,
+    .container > .year_box > .box_right:before {
+        display: none;
+    }
+    .container > .year_box > .first_year {
+        background: #3DFF7E;
+    }
+    .container > .year_box > .second_year {
+        background: #FF3157;
+    }
+    .container > .year_box > .third_year {
+        background: #46EDFF;
+    }
+    .container > .year_box > .fourth_year {
+        background: #FF3AE0;
+    }
 }
