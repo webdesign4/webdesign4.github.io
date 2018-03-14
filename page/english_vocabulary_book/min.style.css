@@ -360,7 +360,7 @@ html, body {
 .jumbotron > .iphone > img {
 	position: absolute;
 	left: 50%;
-	top: 15%;
+	top: 12%;
 	transform: translateX(-50%);
 }
 .jumbotron > .adverno {

@@ -6,10 +6,38 @@ html, body {
 .jumbutron {
     width: 100%;
     height: 100vh;
-    background: url('../image/bg_jumbotron.jpg');
+/*
+    background: url('../image/bg.jpg');
     background-position: center;
     background-size: cover;
+*/
     position: relative;
+	background: red;
+	animation: jumbutronbackground 120s ease-in-out;
+}
+@keyframes jumbutronbackground {
+	0% {
+		background: rgba(87, 190, 255, 0.8);
+	}
+	5% {
+		background: rgba(0, 255, 206, 0.8);
+	}
+	10% {
+		background: rgba(0, 255, 118, 0.8);
+	}
+	15% {
+		background: rgba(69, 255, 0, 0.8);
+	}
+	35% {
+		background: rgba(235, 255, 0, 0.8);
+	}
+	55% {
+		background: rgba(255, 108, 0, 0.8);
+	}
+	80% {
+		background: rgba(255, 0, 0, 0.8);
+	}
+}
 }
 .jumbutron:before {
     content: '';
@@ -286,4 +314,106 @@ html, body {
     .container > .break_text_a > .break_text_a_text {
         font-size: 2.5em
     }
+}
+
+
+
+
+
+
+.containers {
+/*  position: relative;*/
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 15%;
+  height: 20%;
+/*  background: #333;*/
+	top: 94%;
+	left: 50%;
+	transform: translate(-50%, -94%);
+/*	background: red;*/
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+/*	display: block;*/
+	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+	white-space: nowrap;
+	opacity: .25;
+	animation: pulse 2s linear alternate infinite;
+	text-align: center;
+/*	background: red;*/
+	width: 100%;
+	height: 100%;
+	line-height: 270px;
+/*	position: absolute;*/
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
 }
