@@ -489,13 +489,6 @@ html, body {
     -moz-box-shadow: 0 3px 8px rgba(0, 255, 167, 0.4);
     box-shadow: 0 3px 8px rgba(0, 255, 167, 0.4);
 }
-/*	Active */
-.container > .word_box:active {
-    background:rgba(0, 255, 167, 0.78);
-    -webkit-box-shadow: 0 3px 8px rgba(0, 255, 167, 0.4);
-    -moz-box-shadow: 0 3px 8px rgba(0, 255, 167, 0.4);
-    box-shadow: 0 3px 8px rgba(0, 255, 167, 0.4);
-}
 .container > .word_box > .flag {
     width: 58px;
     height: 58px;
@@ -529,25 +522,17 @@ html, body {
     -moz-transition: .7s ease-in-out;
     transition: .7s ease-in-out;
 }
-.container > .word_box > .en_flag {
+.container > .word_box > .de_flag {
 /*    opacity: 0;*/
     -webkit-transition: .7s ease-in-out;
     -moz-transition: .7s ease-in-out;
     transition: .7s ease-in-out;
     left: -150%;
 }
-.container > .word_box:hover .de_flag {
-    left: 150%;
-}
 .container > .word_box:hover .en_flag {
-    opacity: 1;
-    left: 50%;
-}
-/*	Active */
-.container > .word_box:active .de_flag {
     left: 150%;
 }
-.container > .word_box:active .en_flag {
+.container > .word_box:hover .de_flag {
     opacity: 1;
     left: 50%;
 }
@@ -557,7 +542,6 @@ html, body {
     font-size: 3em;
     position: absolute;
     top: 50%;
-    left: 50%;
 /*    background: red;*/
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -569,20 +553,16 @@ html, body {
     -moz-transition: .5s ease;
     transition: .5s ease;
 }
-.container > .word_box:hover .de_language {
-    left: 150%
-}
-.container > .word_box > .en_language {
-    left: -150%;
-}
-.container > .word_box:hover .en_language {
+.container > .word_box .en_language {
     left: 50%;
 }
-/*	Active */
-.container > .word_box:active .de_language {
+.container > .word_box:hover .en_language {
     left: 150%
 }
-.container > .word_box:active .en_language {
+.container > .word_box > .de_language {
+    left: -150%;
+}
+.container > .word_box:hover .de_language {
     left: 50%;
 }
 .container > .word_box > .larg {
