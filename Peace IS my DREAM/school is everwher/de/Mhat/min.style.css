@@ -349,7 +349,7 @@ body, html {
 .jumbotron {
 	width: 100%;
 	height: 70vh;
-	background-image: url('../image/jumbotron_bg.jpg');
+	background-image: url('image/jumbotron_bg.jpg');
 	background-size: cover;
 	position: relative;
 	z-index: 1;
