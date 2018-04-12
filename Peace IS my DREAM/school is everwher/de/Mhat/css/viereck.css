@@ -1,0 +1,130 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+.download-btn,
+.download_btn {
+	width: 250px;
+	height: 60px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+/*
+	background-image: linear-gradient(to right, rgba(79, 172, 254, 0.8) 0%, rgba(0, 242, 254, 0.8) 100%);
+	-webkit-box-shadow: 3px 3px 20px -5px rgba(51, 169, 255, 0.8);
+	-moz-box-shadow: 3px 3px 20px -5px rgba(51, 169, 255, 0.8);
+	box-shadow: 3px 3px 15px -5px rgba(51, 169, 255, 0.8);
+*/
+	background: rgba(4, 255, 146, 0.63);
+	margin-right: 6px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 1.3em;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #ffffff;
+	opacity: 1;
+	-webkit-transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+	transition: opacity .3s ease-in-out;
+	display: block;
+	text-decoration: none;
+}
+.download-btn {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 0;
+	display: block;
+}
+.download_btn {
+	display: none;
+	margin: auto;
+	-webkit-box-shadow: 0px 8px 20px -8px rgba(4, 255, 146, 0.88);
+	-moz-box-shadow: 0px 8px 20px -8px rgba(4, 255, 146, 0.88);
+	box-shadow: 0px 8px 20px -8px rgba(4, 255, 146, 0.88);
+	-webkit-transition: box-shadow .3s ease-in-out;
+	-moz-transition: box-shadow .3s ease-in-out;
+	transition: box-shadow .3s ease-in-out;
+}
+.download_btn:hover {
+	-webkit-box-shadow: 0px 0px 20px -5px rgba(4, 255, 146, 0.88);
+	-moz-box-shadow: 0px 0px 20px -5px rgba(4, 255, 146, 0.88);
+	box-shadow: 0px 0px 20px -5px rgba(4, 255, 146, 0.88);
+}
+.back {
+	width: 90px;
+	height: 50px;
+	animation: animation1 120s ease-in-out;
+	position: absolute;
+	border-radius: 3.5px;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: 10px;
+	text-align: center;
+	background: rgba(87, 190, 255, 0.7);
+    -webkit-box-shadow: 0px 4px 17px -5px rgba(33,197,219,4);
+    -moz-box-shadow: 0px 4px 17px -5px rgba(33,197,219,4);
+    box-shadow: 0px 4px 17px -5px rgba(33, 197, 219, 0.4);
+	opacity: 1;
+	transition: .3s;
+	display: block;
+}
+.back > i {
+	font-size: 1.8em;
+	line-height: 50px;
+	color: white;
+	opacity: 1;
+}
+.back:hover {
+	opacity: .5;
+}
+.download-btn:hover {
+	opacity: .7;
+}
+.title {
+	width: 95%;
+	height: 80px;
+	margin: auto;
+	line-height: 80px;
+	font-size: 2em;
+	font-family: 'Anton', sans-serif;
+	color: rgb(47, 47, 47);
+	padding-left: 60px;
+}
+.youtube_video {
+	width: 95%;
+	height: 650px;
+/*	background: red;*/
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	background-image: url(../image/Sketch.png);
+	background-size: 100% 100%;
+}
+@media only screen and (max-width: 700px) {
+	.youtube_video {
+		height: 400px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.youtube_video {
+		height: 300px;
+	}
+	.download-btn {
+		display: none;
+	}
+	.title {
+		width: 100%;
+		text-align: center;
+		padding: 0;
+	}
+	.download_btn {
+		display: block;
+	}
+}
