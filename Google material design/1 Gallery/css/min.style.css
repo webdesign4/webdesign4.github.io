@@ -1,0 +1,101 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+p {
+	line-height: 1.5;
+}
+#jumbutron_left {
+	height: 88vh;
+}
+#jumbutron_right {
+	height: 88vh;
+	background-image: url('../image/jumbutron_bg.jpg');
+	background-size: cover;
+}
+#jumbutron_left_title {
+	position: absolute;
+	top: 50%;
+	transform: translateX(-8%) translateY(-50%);
+	left: 8%;
+}
+#jumbutron_left_title > .section > h5 {
+	position: relative;
+	z-index: 2;
+}
+#jumbutron_left_title > .section > h5:before {
+	content: '';
+	width: 120px;
+	height: 5px;
+	background: #90CAF9;
+	position: absolute;
+	top: 60%;
+	transform: translateY(-60%);
+	left: -65%;
+	z-index: -1;
+}
+#jumbutron_left_title > .section:nth-child(2) > h5:before {
+	width: 140px;
+	background: #2196F3;
+}
+#secend_row_image_box {
+	height: 340px;
+	border-bottom: 2px solid white;
+	position: relative;
+}
+#second_row_image_box > img {
+	display: block;
+    max-width: 100%;
+    height: auto;
+}
+#secend_row_image_box > #item{
+	width: 100%;
+	height: 50px;
+}
+
+.image-cover {
+	position: relative;
+}
+.image_box {
+	width: 90%;
+	height: 90%;
+	background: linear-gradient(-45deg, #52b2ff, #c3cfe2);
+	background-size: 600%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: background .3s ease-in-out .2s, opacity .3s ease-in;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.image-cover:hover .image_box {
+	opacity: 1;
+}
+.image_box:hover {
+	background-position: 100%;
+}
+.image_btn {
+	position: relative;
+	height: 120px;
+}
+.image_btn > .btn_box {
+	width: 35%;
+	height: 45px;
+	color: white;
+	border-radius: 4px;
+/*	border: 2px solid #263238;*/
+	background: #263238;
+	display: block;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 5%;
+	transform: translateX(-5%) translateY(-10%);
+	top: 10%;
+}
