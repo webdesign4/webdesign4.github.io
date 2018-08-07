@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html {
+	font-family: proxima nova, sans-serif;
+}
+body {
+	width: 100%;
+}
+.container {
+	background: #f7f7f7;
+	padding: 50px;
+}
+p {
+	color: #6a6a6a;
+}
+a.btn {
+	background-color: #4285f4;
+	border-radius: 4px;
+	padding: 1em 2em;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),
+				0 1px 10px 0 rgba(0,0,0,0.12),
+				0 2px 4px -1px rgba(0,0,0,0.3);
+}
+#WOWtest {
+	margin-top: 550px;
+	text-align: center;
+	width: 100%;
+	font-size: 2em;
+	color: #29ff7b;
+}
