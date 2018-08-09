@@ -1,0 +1,28 @@
+html, body {
+	margin: 0px;
+	padding: 0;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#header {
+	height: 60px;
+	position: relative;
+}
+#header > h3 {
+	margin: 0px;
+	font-weight: bold;
+	color: black;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin-left: 10px;
+	font-size: 2.52rem;
+}
+#color_box {
+	height: 385px;
+/*	margin: 5px*/
+}
